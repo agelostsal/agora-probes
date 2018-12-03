@@ -1,4 +1,4 @@
-PKGNAME=agora_probes
+PKGNAME=nagios-plugin-grnet-agora
 SPECFILE=${PKGNAME}.spec
 PKGVERSION=$(shell grep -s '^Version:' $(SPECFILE) | sed -e 's/Version: *//')
 
