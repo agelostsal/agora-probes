@@ -2,7 +2,7 @@
 %{!?python_sitelib: %global python_sitelib %(%{__python} -c "from distutils.sysconfig import get_python_lib; print get_python_lib()")}
 %define dir /usr/libexec/argo-monitoring/probes/agora
 
-Name: nagios-plugin-agora
+Name: nagios-plugin-grnet-agora
 Summary: Agora related probes
 Version: 0.1
 Release: 1%{?dist}
