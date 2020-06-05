@@ -21,7 +21,7 @@ class AgoraHealthCheck:
 
     def check_endpoint(self, endpointExtension='', checkJSON=False):
         try:
-            endpoint = self.args.domain + endpointExtension
+            endpoint = self.args.url + endpointExtension
             r = requests.get(endpoint, verify=self.verify_ssl,
                              timeout=self.args.timeout)
             r.raise_for_status()
@@ -43,7 +43,7 @@ class AgoraHealthCheck:
                         'username': self.args.username,
                         'password': self.args.password,
             }
-            r = requests.post(self.args.domain + loginEndpoint, data=payload,
+            r = requests.post(self.args.url + loginEndpoint, data=payload,
                     verify=self.verify_ssl)
             r.raise_for_status()
         except requests.exceptions.HTTPError as e:
@@ -66,8 +66,8 @@ class AgoraHealthCheck:
 
 def parse_arguments(args):
     parser = argparse.ArgumentParser(description="Nagios Probe for Agora")
-    parser.add_argument('-D', '--domain', dest='domain', required=True,
-                        type=str, help='Agora\'s domain')
+    parser.add_argument('-U', '--url', dest='url', required=True,
+                        type=str, help='Agora\'s url')
     parser.add_argument('-v', '--verbose', dest='verbose',
                         action='store_true', help='verbose output')
     parser.add_argument('-t', '--timeout', dest='timeout', type=int,

@@ -35,4 +35,7 @@ setup(name=NAME,
       data_files=data_files(),
       packages=['agora_probes'],
       package_dir={'agora_probes': 'modules/'},
+      install_requires=[
+          'requests>=2.19.1',
+      ],
 )
