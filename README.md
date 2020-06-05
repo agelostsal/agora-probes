@@ -77,3 +77,9 @@ GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see [http://www.gnu.org/licenses/]([http://www.gnu.org/licenses/).
 
+## Funding
+The work represented by this software was partially funded by
+
+- EOSC-Hub project European Union (EU) Horizon 2020 program under Grant number 77753642.
+- EUDAT2020 European Union’s H2020 Program under Contract No. 654065.
+- EUDAT Framework Programme 7 under Contract No. 283304.
