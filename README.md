@@ -46,10 +46,8 @@ optional arguments:
 
 Agora Health Check does the following:
 
-- Checks if the Agora instance is up and returns 200 OK
-- Checks if /api/v2/services is up and returns a valid JSON
-- Checks if /api/v2/ext-services is up and returns a valid JSON
-- If given a username-password combinations, checks if it can login
+- Given the username and password it will try to login and retrieve the respective auth token
+- Check if /api/v2/resources is responding properly and can be accessed with the previously retrieved auth token
 
 
 The probe returns exit codes and responses according to Nagios Plugins Specifications.
